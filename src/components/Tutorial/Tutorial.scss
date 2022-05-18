@@ -1,0 +1,268 @@
+@import "../../assets/styles//variables.scss";
+.tutorial {
+    margin: 50px 0 70px 0;
+    background-color: $bgTutorial;
+    padding: 60px 80px;
+    display: grid;
+    grid-template-columns: 30% 40% auto;
+    &-content {
+        .subtit {
+            font-family: $fontMontserMedium;
+            font-size: $font18;
+            color: $clSubTutorial;
+            letter-spacing: 1.8px;
+        }
+        .title {
+            font-size: $font35;
+            font-family: $fontMontserMedium;
+            color: $bgHeader;
+            line-height: 1.16;
+            padding: 25px 0 70px 0;
+        }
+        .content-button {
+            background-color: $bgHeader;
+            padding: 15px 43px;
+            display: inline-block;
+            cursor: pointer;
+            span {
+                color: $clWhite;
+                font-size: $fontText;
+                letter-spacing: 1.2px;
+                font-family: $fontMontserRegular;
+
+            }
+        }
+    }
+    &-video {
+        background-image: url(../../assets/images/tutorial-img-1.png);
+        width: 526px;
+        height: 300px;
+        position: relative;
+        .img-youtube {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            img {
+                width: 80px;
+                height: 50px;
+                cursor: pointer;
+            }
+        }
+        .img-live {
+            position: absolute;
+            top: 10px;
+            left: -10px;
+            
+            img {
+        
+                width: 63px;
+                height: 28px;
+            }
+        }
+        .time {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 7px 11px;
+            background: $bgBlack;
+            color: $clWhite;
+            font-family: $fontMontserMedium;
+            font-size: $font16;
+        }
+    }
+    &-list-video {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .video-items {
+            display: flex;
+            img {
+                width: 157px;
+                height: 89px;
+                cursor: pointer;
+                object-fit: cover;
+            }
+        }
+        .items-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-left: 20px;
+            .title {
+                font-family: $fontMontserMedium;
+                font-size: $font18;
+                color: $bgHeader;
+            }
+            p {
+                font-family: $fontMontserLight;
+                font-size: $fontSmall;
+                line-height: 1.2;
+            }
+            .review {
+                display: flex;
+                align-items: center;
+                span {
+                    padding-left: 5px;
+                    font-family: $fontMontserLight;
+                font-size: $fontSmall;
+                }
+                .like {
+                    img {
+                        width: 14px;
+                        height: 12px;
+                    }
+                }
+                .watch {
+                    padding-left: 12px;
+                    img {
+                        width: 16px;
+                        height: 12px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+    &-video-mobile {
+        background-image: url(../../assets/images/tutorial-img-1.png);
+        width: 526px;
+        height: 300px;
+        position: relative;
+        .img-youtube {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            img {
+                width: 80px;
+                height: 50px;
+                cursor: pointer;
+            }
+        }
+        .img-live {
+            position: absolute;
+            top: 10px;
+            left: -10px;
+            
+            img {
+        
+                width: 63px;
+                height: 28px;
+            }
+        }
+        .time {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 7px 11px;
+            background: $bgBlack;
+            color: $clWhite;
+            font-family: $fontMontserMedium;
+            font-size: $font16;
+        }
+    }
+    &-list-video-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .video-items {
+            display: flex;
+            img {
+                width: 157px;
+                height: 89px;
+                cursor: pointer;
+                object-fit: cover;
+            }
+        }
+        .items-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-left: 20px;
+            .title {
+                font-family: $fontMontserMedium;
+                font-size: $font18;
+                color: $bgHeader;
+            }
+            p {
+                font-family: $fontMontserLight;
+                font-size: $fontSmall;
+                line-height: 1.2;
+            }
+            .review {
+                display: flex;
+                align-items: center;
+                span {
+                    padding-left: 5px;
+                    font-family: $fontMontserLight;
+                font-size: $fontSmall;
+                }
+                .like {
+                    img {
+                        width: 14px;
+                        height: 12px;
+                    }
+                }
+                .watch {
+                    padding-left: 12px;
+                    img {
+                        width: 16px;
+                        height: 12px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+    &-mobile {
+        display: none;
+    }
+    @media screen and (max-width: 1500px) {
+        grid-template-columns: 1fr;
+        &-video {
+            display: none;
+        }
+        &-list-video {
+            display: none;
+        }
+       .tutorial-mobile {
+           margin-top: 50px;
+           display: grid;
+           grid-template-columns: 1fr 1fr;
+
+       }
+    }
+    @media screen and (max-width: 1230px) {
+       .tutorial-mobile {
+           margin-top: 50px;
+           display: grid;
+           grid-template-columns: 40% auto;
+           column-gap: 20px;
+            .tutorial-video-mobile {
+                width: 100%;
+            }
+       }
+    }
+    @media screen and (max-width: 900px) {
+        margin: 30px 0 30px 0;
+        padding: 30px;
+    }
+    @media screen and (max-width: 639px) {
+        .tutorial-mobile {
+            margin-top: 50px;
+            display: flex;
+           flex-direction: column;
+             .tutorial-video-mobile {
+                 width: 100%;
+                 margin-bottom: 30px;
+             }
+        }
+    }
+    @media screen and (max-width: 639px) {
+        .tutorial-content .title {
+            font-size: 22px;
+            padding-bottom: 30px;
+         }
+    }
+}

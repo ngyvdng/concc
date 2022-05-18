@@ -1,0 +1,58 @@
+@import "../../assets/styles/variables.scss";
+.menu-container {
+    .swiper-button-next:after, .swiper-button-prev:after { 
+        display: none;
+    }
+    .swiper-button-next {
+        background-image: url(../../assets//images/r-red-circle-arrow@3x.png);
+        width: 45px;
+    height: 45px;
+    background-size: cover;
+
+    }
+    .swiper-button-prev {
+        background-image: url(../../assets//images/l-red-circle-arrow@3x.png);
+        width: 45px;
+    height: 45px;
+    background-size: cover;
+    }
+    .menu-item {
+        background-color: $bgHeader;
+        color: $clWhite;
+        font-family: $fontMontserMedium;
+        font-size: $font18;
+        line-height: 1.1;
+        margin: 10px 0;
+        height: 80px;
+        cursor: pointer;
+        border-radius: 2px;
+        span {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            white-space: pre-line;
+        }
+    }
+    .open {
+        background-color: $bgMenuActive;
+        
+    }
+    @media screen and (max-width: 900px) {
+        .menu-item {
+            font-size: $fontText;
+        }
+        .swiper-button-prev , .swiper-button-next {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 640px) {
+        .menu-item {
+            font-size: $fontText;
+            margin: 5px 0;
+            height: 60px;
+        }
+    }
+}

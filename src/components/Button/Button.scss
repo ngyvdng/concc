@@ -1,0 +1,45 @@
+@import "../../assets/styles/variables.scss";
+.button-component {
+   span {
+       font-size: $fontSmall;
+       font-family: $fontMontserRegular;
+       padding-left: 7px;
+   }
+   cursor: pointer;
+   padding: 10px 45px;
+   display: inline-flex;
+   align-items: center;
+   border: 1px solid $bgHeader;
+   margin-left: 3px;
+   margin-top: 3px;
+   img {
+       width: 14px;
+       height: 14px;
+   }
+   @media screen and (max-width: 900px) {
+    padding: 8px 25px;
+   }
+}
+.light {
+    background: $clWhite;
+    color: $bgHeader;
+    transition: 400ms;
+    
+}
+.dark {
+    background: $bgHeader;
+    color: $clWhite;
+}
+.button-danger {
+    color: $bgMenuActive;
+    border: 1px solid $bgMenuActive;
+    padding: 8px 10px;
+    font-size: $fontText;
+    font-family: $fontMontserMedium;
+    display: inline-block;
+    margin-left: 3px;
+    margin-top: 3px;
+    // &:not(:first-child) {
+    //     
+    // }
+}

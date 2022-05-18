@@ -1,0 +1,166 @@
+@import "../../assets/styles/variables.scss";
+.header-container {
+    height: 60px;
+    background-color: $bgHeader;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: 35% 50% auto;
+    align-items: center;
+    position: sticky;
+    top:0;
+    left: 0;
+    z-index: 999;
+    .header-logo {
+        display: flex;
+        align-items: center;
+        height: 60px;
+        .logo {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            img {
+                width: 182px;
+                height: 17px;
+                object-fit: cover;
+            }
+        }
+        .header-logo-content {
+            color: $clTextHeader ;
+            font-family: $fontMedium;
+            a {
+                padding-left: 30px; 
+                font-size: $fontText;
+                font-family: $fontMontserMedium;
+            }
+        }
+    }
+    .header-search  {
+     form {
+        padding: 12px 0;
+        background-color: $bgHeader;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        input {
+            width: 60%;
+            border: none;
+            background-color: $bgHeader;
+            color: $clWhite;
+            padding: 10px 10px;
+            border-bottom: 1px solid $clTextHeader;
+            &:focus {
+                outline: none;
+            }
+        }
+        ::placeholder { 
+            color: $clWhite;
+            opacity: 0.7;
+            font-family: $fontMontserRegular;
+            font-size: $fontText;
+          }
+          .header-search-icon {
+              img {
+                  width: 21px;
+                  height: 21px;
+                  cursor: pointer;
+              }
+
+          }
+    }
+}
+    .header-login {
+        color: $clTextHeader;
+        font-family: $fontMontserMedium;
+       a {
+        padding-left: 30px;
+        font-size: $fontText;
+       }
+    }
+   
+    @media screen and (max-width: 1280px) {
+        grid-template-columns: 40% 40% auto;
+        .header-search {
+            input {
+                width: 80%;
+            }
+        }
+    }
+    @media screen and (max-width: 935px) {
+        display: flex;
+        .header-search {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 510px) {
+        .header-login {
+            display: none;
+        }
+        padding: 0 10px;
+        .header-mobile {
+            display: block;
+        }
+        .header-logo-content {
+            a {
+                padding-left: 16px !important;
+            }
+        }
+    }
+}
+.header-mobile {
+    display: none;
+    width: 100%;
+    position: sticky;
+    top:60px;
+    z-index: 999;
+    &-search {
+        padding: 5px 10px;
+        background-color: $bgHeader;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        input {
+            width: 60%;
+            border: none;
+            background-color: $bgHeader;
+            color: $clWhite;
+            padding: 10px 10px;
+            &:focus {
+                outline: none;
+            }
+        }
+        ::placeholder { 
+            color: $clWhite;
+            opacity: 0.7;
+            font-family: $fontMontserRegular;
+            font-size: $fontText;
+          }
+          &-icon {
+              img {
+                  width: 21px;
+                  height: 21px;
+                  cursor: pointer;
+              }
+
+          }
+          
+    }
+    @media screen and (max-width: 935px) { 
+        display: block;
+    }
+}
+.header-mobile-login {
+    
+    display: none;
+    padding: 15px 0px;
+    background-color: $bgHeader;
+    color: $clTextHeader;
+    font-family: $fontMontserMedium;
+   a {
+    padding-left: 30px;
+    font-size: $fontText;
+   }
+   @media screen and (max-width: 510px) { 
+    display: block;
+}
+}
+

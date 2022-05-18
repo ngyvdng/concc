@@ -1,0 +1,109 @@
+@import "../../assets/styles//variables.scss";
+.footer {
+    margin-top: 70px;
+    &-contact {
+        background: $bgHeader;
+        color: $clWhite;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 30px;
+        .contact {
+            display: flex;
+            align-items: center;
+            &-title {
+                font-size: $fontText;
+                font-family: $fontMontserMedium;
+            }
+            &-mail {
+                font-size: $fontSmall;
+                font-family: $fontMontserExtrLight;
+                padding-left: 30px;
+            }
+        }
+        .social {
+            display: flex;
+  
+            &-content {
+                font-size: $fontSmall;
+                font-family: $fontMontserExtrLight;
+                color: #9b9b9b;
+            }
+            .insta-img {
+                width: 17px;
+                height: 17px;
+                padding-left: 31px;
+                cursor: pointer;
+            }
+            .fb-img {
+                width: 8px;
+                height: 17px;
+                padding: 0 15px;
+                cursor: pointer;
+            }
+            .youtube-img {
+                width: 18px;
+                height: 14px;
+                cursor: pointer;
+            }
+        }
+    }
+    &-intro {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+        ul {
+            display: flex;
+            align-items: center;
+            padding: 11px 0;
+            li {
+               &:not(:first-child) {
+                padding-left: 35px;
+               }
+                a,select {
+                    font-size: $fontSmall;
+                    font-family: $fontMontserLight;
+                }
+                select {
+                    cursor: pointer;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+        .intro-logo {
+          img {
+            width: 182px;
+            height: 17px;
+            object-fit: cover;
+          }
+        }
+    }
+    @media screen and (max-width: 720px) {
+        .footer-intro {
+            flex-direction: column;
+            padding-bottom: 20px;
+        }
+    }
+    @media screen and (max-width: 620px) {
+        .footer-contact {
+            flex-direction: column;
+            padding: 5px 0;
+            .social {
+                padding-top: 10px;
+            }
+        }
+        .intro-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 10px;
+            column-gap: 20px;
+            font-size: $fontText;
+        }
+        .footer-intro ul li { 
+            padding-left: 0;
+        }
+    }
+}
